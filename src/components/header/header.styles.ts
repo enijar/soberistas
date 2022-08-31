@@ -5,11 +5,19 @@ export const HeaderLinksList = styled.div`
   align-items: center;
   gap: 1em;
 
+  @media (max-width: 850px) {
+    flex-direction: column;
+  }
+
   a {
     display: flex;
     align-items: center;
     gap: 0.25em;
     font-size: 0.8em;
+
+    @media (max-width: 1060px) {
+      font-size: 0.6em;
+    }
 
     svg {
       color: #007b3c;
@@ -27,7 +35,11 @@ export const HeaderLogo = styled.div`
 
   img {
     width: auto;
-    height: 6em;
+    height: 4.5em;
+
+    @media (max-width: 1060px) {
+      height: 3em;
+    }
   }
 `;
 
@@ -50,6 +62,10 @@ export const HeaderActionDivider = styled.div`
   height: 1em;
   background-color: currentColor;
   margin-inline: 0.5em;
+
+  @media (max-width: 650px) {
+    display: none;
+  }
 `;
 
 type ActionProps = {
@@ -64,11 +80,17 @@ export const HeaderAction = styled.div<ActionProps>`
   font-size: 0.75em;
   padding-inline: 1em;
 
+  @media (max-width: 650px) {
+    font-size: 0.65em;
+    padding-inline: 0.5em;
+  }
+
   ${({ color }) => {
     return css`
       background-color: var(--color-${color});
     `;
-  }}
+  }};
+
   svg,
   img {
     width: auto;
@@ -90,6 +112,12 @@ export const HeaderActions = styled.div`
   display: flex;
   align-items: center;
   color: #ffffff;
+
+  @media (max-width: 650px) {
+    ${HeaderAction}:nth-child(2), ${HeaderAction}:nth-child(3) {
+      display: none;
+    }
+  }
 `;
 
 export const HeaderActionsWrapper = styled.div`
