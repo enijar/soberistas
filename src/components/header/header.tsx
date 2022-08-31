@@ -25,6 +25,7 @@ export default function Header() {
               <span>&nbsp;&nbsp;</span>
               <span>James</span>
             </HeaderAction>
+            <HeaderAction />
             <HeaderAction>
               <Link href="/">Profile</Link>
             </HeaderAction>
