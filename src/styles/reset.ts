@@ -22,6 +22,7 @@ const Reset = createGlobalStyle`
     box-sizing: border-box;
     font-family: inherit;
     font-size: inherit;
+    font-weight: inherit;
     line-height: inherit;
     color: inherit;
   }
