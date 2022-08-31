@@ -5,6 +5,10 @@ import {
   HeaderActions,
   HeaderActionsWrapper,
   HeaderContainer,
+  HeaderLinksInner,
+  HeaderLinksList,
+  HeaderLinksWrapper,
+  HeaderLogo,
   HeaderWrapper,
 } from "@/components/header/header.styles";
 import UserIcon from "@/components/icons/user-icon";
@@ -13,6 +17,7 @@ import FacebookIcon from "@/components/icons/facebook-icon";
 import InstagramIcon from "@/components/icons/instagram-icon";
 import YoutubeIcon from "@/components/icons/youtube-icon";
 import SearchIcon from "@/components/icons/search-icon";
+import IconChevronDown from "@/components/icons/icon-chevron-down";
 
 export default function Header() {
   return (
@@ -75,6 +80,48 @@ export default function Header() {
           </HeaderActions>
         </HeaderContainer>
       </HeaderActionsWrapper>
+      <HeaderLinksWrapper>
+        <HeaderContainer>
+          <HeaderLinksInner>
+            <HeaderLogo>
+              <img src="/assets/logo.png" alt="Soberistas" />
+              <img
+                src="/assets/anniversary-badge.jpg"
+                alt="Soberistas 10th year anniversary"
+              />
+            </HeaderLogo>
+            <HeaderLinksList>
+              <Link href="/">Home</Link>
+              <Link href="/">
+                <a>
+                  <span>About Us</span>
+                  <IconChevronDown />
+                </a>
+              </Link>
+              <Link href="/">
+                <a>
+                  <span>Lifestyle</span>
+                  <IconChevronDown />
+                </a>
+              </Link>
+              <Link href="/">Personal Stories</Link>
+              <Link href="/">
+                <a>
+                  <span>Blogs</span>
+                  <IconChevronDown />
+                </a>
+              </Link>
+              <Link href="/">
+                <a>
+                  <span>Resources</span>
+                  <IconChevronDown />
+                </a>
+              </Link>
+              <Link href="/">Contact Us</Link>
+            </HeaderLinksList>
+          </HeaderLinksInner>
+        </HeaderContainer>
+      </HeaderLinksWrapper>
     </HeaderWrapper>
   );
 }
