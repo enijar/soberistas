@@ -5,6 +5,9 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  devIndicators: {
+    buildActivity: false,
+  },
 };
 
 module.exports = nextConfig;
