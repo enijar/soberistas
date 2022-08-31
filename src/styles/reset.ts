@@ -6,6 +6,10 @@ const Reset = createGlobalStyle`
     --root-size: calc(var(--root-scale) * 1vh);
     --root-min: 16px;
     --root-max: 20px;
+    --color-primary: #000000;
+    --color-orange: #ff6c52;
+    --color-teal: #9bd9da;
+    --color-green: #69a6a7;
   }
 
   @media (orientation: portrait) {
@@ -24,9 +28,11 @@ const Reset = createGlobalStyle`
 
   html,
   body,
-  #root {
+  #__next,
+  main {
     width: 100%;
     height: 100%;
+    background-color: #ffffff;
   }
 
   html {
@@ -34,8 +40,13 @@ const Reset = createGlobalStyle`
     font-family: system-ui, sans-serif;
     font-weight: normal;
     line-height: 1em;
-    background-color: #1e1e1e;
-    color: #fefefe;
+    touch-action: none;
+    color: #000000;
+  }
+
+  main {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
 `;
 
