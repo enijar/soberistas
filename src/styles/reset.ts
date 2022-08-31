@@ -33,6 +33,11 @@ const Reset = createGlobalStyle`
     width: 100%;
     height: 100%;
     background-color: #ffffff;
+    overflow: hidden;
+  }
+
+  img, svg, iframe, video {
+    display: block;
   }
 
   html {
@@ -47,6 +52,14 @@ const Reset = createGlobalStyle`
   main {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+  a {
+    text-decoration: none;
+
+    :hover {
+      text-decoration: underline;
+    }
   }
 `;
 
