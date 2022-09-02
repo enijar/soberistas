@@ -8,12 +8,12 @@ type Props = {
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   return {
     props: {
-      title: "Diet",
+      title: "Forum Discussions",
     },
   };
 };
 
-const Diet: NextPage<Props> = (props) => {
+const ForumDiscussions: NextPage<Props> = (props) => {
   return (
     <main>
       <Header />
@@ -22,4 +22,4 @@ const Diet: NextPage<Props> = (props) => {
   );
 };
 
-export default Diet;
+export default ForumDiscussions;

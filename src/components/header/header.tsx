@@ -120,7 +120,7 @@ export default function Header() {
                   );
                 }}
               >
-                <Link href="/about">
+                <Link href="/about-us">
                   <a>
                     <span>About Us</span>
                     <IconChevronDown />
@@ -132,12 +132,12 @@ export default function Header() {
                   return (
                     <>
                       <HeaderLink>
-                        <Link href="/news/mind">
+                        <Link href="/news/mind-and-body">
                           <a>Mind & Body</a>
                         </Link>
                       </HeaderLink>
                       <HeaderLink>
-                        <Link href="/news/diet">
+                        <Link href="/news/diet-and-nutrition">
                           <a>Diet & Nutrition</a>
                         </Link>
                       </HeaderLink>
@@ -157,7 +157,7 @@ export default function Header() {
                         </Link>
                       </HeaderLink>
                       <HeaderLink>
-                        <Link href="/discounts">
+                        <Link href="/discount-club">
                           <a>Discount Club</a>
                         </Link>
                       </HeaderLink>
@@ -180,12 +180,12 @@ export default function Header() {
                   return (
                     <>
                       <HeaderLink>
-                        <Link href="/chat">
+                        <Link href="/chat-room">
                           <a>Chat Room</a>
                         </Link>
                       </HeaderLink>
                       <HeaderLink>
-                        <Link href="/forum">
+                        <Link href="/forum-discussions">
                           <a>Forum Discussions</a>
                         </Link>
                       </HeaderLink>
@@ -252,7 +252,7 @@ export default function Header() {
                 <IconChevronDown />
               </HeaderLink>
               <HeaderLink>
-                <Link href="/contact">Contact Us</Link>
+                <Link href="/contact-us">Contact Us</Link>
               </HeaderLink>
             </HeaderLinksList>
           </HeaderLinksInner>

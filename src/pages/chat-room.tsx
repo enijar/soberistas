@@ -8,12 +8,12 @@ type Props = {
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   return {
     props: {
-      title: "Mind",
+      title: "Chat Room",
     },
   };
 };
 
-const Mind: NextPage<Props> = (props) => {
+const ChatRoom: NextPage<Props> = (props) => {
   return (
     <main>
       <Header />
@@ -22,4 +22,4 @@ const Mind: NextPage<Props> = (props) => {
   );
 };
 
-export default Mind;
+export default ChatRoom;
