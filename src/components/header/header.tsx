@@ -175,7 +175,34 @@ export default function Header() {
               <HeaderLink>
                 <Link href="/personal-stories">Personal Stories</Link>
               </HeaderLink>
-              <HeaderLink>
+              <HeaderLink
+                list={() => {
+                  return (
+                    <>
+                      <HeaderLink>
+                        <Link href="/chat">
+                          <a>Chat Room</a>
+                        </Link>
+                      </HeaderLink>
+                      <HeaderLink>
+                        <Link href="/forum">
+                          <a>Forum Discussions</a>
+                        </Link>
+                      </HeaderLink>
+                      <HeaderLink>
+                        <Link href="/members">
+                          <a>Members</a>
+                        </Link>
+                      </HeaderLink>
+                      <HeaderLink>
+                        <Link href="/member-of-the-month">
+                          <a>Member of the Month</a>
+                        </Link>
+                      </HeaderLink>
+                    </>
+                  );
+                }}
+              >
                 <Link href="/blogs">
                   <a>
                     <span>Blogs</span>
