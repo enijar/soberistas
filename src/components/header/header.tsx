@@ -18,6 +18,7 @@ import InstagramIcon from "@/components/icons/instagram-icon";
 import YoutubeIcon from "@/components/icons/youtube-icon";
 import SearchIcon from "@/components/icons/search-icon";
 import IconChevronDown from "@/components/icons/icon-chevron-down";
+import HeaderLink from "@/components/header/header-link";
 
 export default function Header() {
   return (
@@ -91,33 +92,67 @@ export default function Header() {
               />
             </HeaderLogo>
             <HeaderLinksList>
-              <Link href="/">Home</Link>
-              <Link href="/">
-                <a>
-                  <span>About Us</span>
-                  <IconChevronDown />
-                </a>
-              </Link>
-              <Link href="/">
-                <a>
-                  <span>Lifestyle</span>
-                  <IconChevronDown />
-                </a>
-              </Link>
-              <Link href="/">Personal Stories</Link>
-              <Link href="/">
-                <a>
-                  <span>Blogs</span>
-                  <IconChevronDown />
-                </a>
-              </Link>
-              <Link href="/">
-                <a>
-                  <span>Resources</span>
-                  <IconChevronDown />
-                </a>
-              </Link>
-              <Link href="/">Contact Us</Link>
+              <HeaderLink>
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
+              </HeaderLink>
+              <HeaderLink
+                list={() => {
+                  return (
+                    <>
+                      <HeaderLink>
+                        <Link href="/getting-started">
+                          <a>Getting Started</a>
+                        </Link>
+                      </HeaderLink>
+                      <HeaderLink>
+                        <Link href="/media">
+                          <a>Media</a>
+                        </Link>
+                      </HeaderLink>
+                      <HeaderLink>
+                        <Link href="/testimonials">
+                          <a>Testimonials</a>
+                        </Link>
+                      </HeaderLink>
+                    </>
+                  );
+                }}
+              >
+                <Link href="/about">
+                  <a>
+                    <span>About Us</span>
+                    <IconChevronDown />
+                  </a>
+                </Link>
+              </HeaderLink>
+              <HeaderLink>
+                <Link href="/news/lifestyle">
+                  <a>
+                    <span>Lifestyle</span>
+                    <IconChevronDown />
+                  </a>
+                </Link>
+              </HeaderLink>
+              <HeaderLink>
+                <Link href="/personal-stories">Personal Stories</Link>
+              </HeaderLink>
+              <HeaderLink>
+                <Link href="/blogs">
+                  <a>
+                    <span>Blogs</span>
+                    <IconChevronDown />
+                  </a>
+                </Link>
+              </HeaderLink>
+              <HeaderLink>
+                <span>Resources</span>
+                <IconChevronDown />
+              </HeaderLink>
+              <HeaderLink>
+                <Link href="/contact">Contact Us</Link>
+              </HeaderLink>
             </HeaderLinksList>
           </HeaderLinksInner>
         </HeaderContainer>

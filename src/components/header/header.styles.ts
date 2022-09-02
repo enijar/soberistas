@@ -1,5 +1,70 @@
 import styled, { css } from "styled-components";
 
+export const HeaderLinkHeader = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+
+    :hover {
+      text-decoration: none;
+    }
+  }
+
+  svg {
+    color: #007b3c;
+  }
+`;
+
+export const HeaderLinkWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25em;
+  font-size: 0.8em;
+  font-weight: normal;
+  cursor: pointer;
+  position: relative;
+
+  @media (max-width: 1060px) {
+    font-size: 0.6em;
+  }
+`;
+
+export const HeaderLinkListInner = styled.div`
+  background-color: #ffffff;
+  box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+  border-bottom: 2px solid #69a6a7;
+`;
+
+export const HeaderLinkList = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  white-space: nowrap;
+  padding-block-start: 1.5em;
+
+  ${HeaderLinkWrapper} {
+    border-bottom: 1px solid #eee;
+
+    :last-child {
+      border-bottom: none;
+    }
+
+    a {
+      padding: 1em;
+
+      :hover {
+        background-color: #9bd9da;
+      }
+    }
+  }
+`;
+
 export const HeaderLinksList = styled.div`
   display: flex;
   align-items: center;
@@ -7,25 +72,6 @@ export const HeaderLinksList = styled.div`
 
   @media (max-width: 850px) {
     flex-direction: column;
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-    gap: 0.25em;
-    font-size: 0.8em;
-
-    @media (max-width: 1060px) {
-      font-size: 0.6em;
-    }
-
-    svg {
-      color: #007b3c;
-    }
-
-    :hover {
-      text-decoration: none;
-    }
   }
 `;
 
