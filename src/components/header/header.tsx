@@ -133,7 +133,32 @@ export default function Header() {
                     <>
                       <HeaderLink>
                         <Link href="/news/mind">
-                          <a>Mind</a>
+                          <a>Mind & Body</a>
+                        </Link>
+                      </HeaderLink>
+                      <HeaderLink>
+                        <Link href="/news/diet">
+                          <a>Diet & Nutrition</a>
+                        </Link>
+                      </HeaderLink>
+                      <HeaderLink>
+                        <Link href="/book-club">
+                          <a>Book Club</a>
+                        </Link>
+                      </HeaderLink>
+                      <HeaderLink>
+                        <Link href="/ask-the-doctor">
+                          <a>Ask the Doctor</a>
+                        </Link>
+                      </HeaderLink>
+                      <HeaderLink>
+                        <Link href="/booze-news">
+                          <a>Booze News</a>
+                        </Link>
+                      </HeaderLink>
+                      <HeaderLink>
+                        <Link href="/discounts">
+                          <a>Discount Club</a>
                         </Link>
                       </HeaderLink>
                     </>
