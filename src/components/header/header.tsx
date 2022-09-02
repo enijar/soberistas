@@ -210,7 +210,44 @@ export default function Header() {
                   </a>
                 </Link>
               </HeaderLink>
-              <HeaderLink>
+              <HeaderLink
+                list={() => {
+                  return (
+                    <>
+                      <HeaderLink>
+                        <Link href="/gallery">
+                          <a>Gallery</a>
+                        </Link>
+                      </HeaderLink>
+                      <HeaderLink>
+                        <Link href="/video">
+                          <a>Video</a>
+                        </Link>
+                      </HeaderLink>
+                      <HeaderLink>
+                        <Link href="/webinars">
+                          <a>Webinars</a>
+                        </Link>
+                      </HeaderLink>
+                      <HeaderLink>
+                        <Link href="/useful-contacts">
+                          <a>Useful Contacts</a>
+                        </Link>
+                      </HeaderLink>
+                      <HeaderLink>
+                        <Link href="/chat-guidelines">
+                          <a>Chat Guidelines</a>
+                        </Link>
+                      </HeaderLink>
+                      <HeaderLink>
+                        <Link href="/write-for-us">
+                          <a>Write for Us</a>
+                        </Link>
+                      </HeaderLink>
+                    </>
+                  );
+                }}
+              >
                 <span>Resources</span>
                 <IconChevronDown />
               </HeaderLink>
