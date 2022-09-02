@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import {
   HeaderAction,
@@ -6,6 +7,7 @@ import {
   HeaderActionsWrapper,
   HeaderContainer,
   HeaderLinksInner,
+  HeaderLinksListMobileToggle,
   HeaderLinksList,
   HeaderLinksWrapper,
   HeaderLogo,
@@ -19,8 +21,15 @@ import YoutubeIcon from "@/components/icons/youtube-icon";
 import SearchIcon from "@/components/icons/search-icon";
 import IconChevronDown from "@/components/icons/icon-chevron-down";
 import HeaderLink from "@/components/header/header-link";
+import MenuIcon from "@/components/icons/menu-icon";
 
 export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+
+  const toggleMobileMenu = React.useCallback(() => {
+    setMobileMenuOpen((mobileMenuOpen) => !mobileMenuOpen);
+  }, []);
+
   return (
     <HeaderWrapper>
       <HeaderActionsWrapper>
@@ -95,7 +104,10 @@ export default function Header() {
                 </a>
               </Link>
             </HeaderLogo>
-            <HeaderLinksList>
+            <HeaderLinksListMobileToggle onClick={toggleMobileMenu}>
+              <MenuIcon />
+            </HeaderLinksListMobileToggle>
+            <HeaderLinksList open={mobileMenuOpen}>
               <HeaderLink>
                 <Link href="/">
                   <a>Home</a>

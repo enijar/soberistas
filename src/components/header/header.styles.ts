@@ -49,6 +49,14 @@ export const HeaderLinkWrapper = styled.div<{ hasList?: boolean }>`
   z-index: 1;
 
   :hover, :focus-within {
+    @media (min-width: 851px) {
+      ${HeaderLinkList} {
+        display: block;
+      }
+    }
+  }
+
+  :focus-within {
     ${HeaderLinkList} {
       display: block;
     }
@@ -81,14 +89,40 @@ export const HeaderLinkWrapper = styled.div<{ hasList?: boolean }>`
   }}};
 `;
 
-export const HeaderLinksList = styled.div`
+export const HeaderLinksListMobileToggle = styled.button`
+  --size: 2em;
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  background-color: var(--color-green);
+  border-radius: 0.5em;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+`;
+
+export const HeaderLinksList = styled.div<{ open: boolean }>`
   display: flex;
   align-items: center;
   gap: 1em;
 
   @media (max-width: 850px) {
     flex-direction: column;
-  }
+    align-items: start;
+    padding-block-start: 1em;
+
+    ${HeaderLinkList} {
+      position: relative;
+      z-index: 0;
+    }
+
+    ${({ open }) => {
+      return css`
+        display: ${open ? "flex" : "none"};
+      `;
+    }};
 `;
 
 export const HeaderLogo = styled.div`
@@ -114,6 +148,12 @@ export const HeaderLinksInner = styled.div`
   justify-content: space-between;
   padding-inline: 1em;
   padding-block: 0.5em;
+
+  @media (min-width: 851px) {
+    ${HeaderLinksListMobileToggle} {
+      display: none;
+    }
+  }
 `;
 
 export const HeaderLinksWrapper = styled.div`
