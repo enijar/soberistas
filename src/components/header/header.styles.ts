@@ -92,15 +92,17 @@ export const HeaderLinksList = styled.div`
 `;
 
 export const HeaderLogo = styled.div`
-  display: flex;
-  align-items: center;
+  a {
+    display: flex;
+    align-items: center;
 
-  img {
-    width: auto;
-    height: 4.5em;
+    img {
+      width: auto;
+      height: 4.5em;
 
-    @media (max-width: 1060px) {
-      height: 3em;
+      @media (max-width: 1060px) {
+        height: 3em;
+      }
     }
   }
 `;

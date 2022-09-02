@@ -85,11 +85,15 @@ export default function Header() {
         <HeaderContainer>
           <HeaderLinksInner>
             <HeaderLogo>
-              <img src="/assets/logo.png" alt="Soberistas" />
-              <img
-                src="/assets/anniversary-badge.jpg"
-                alt="Soberistas 10th year anniversary"
-              />
+              <Link href="/">
+                <a>
+                  <img src="/assets/logo.png" alt="Soberistas" />
+                  <img
+                    src="/assets/anniversary-badge.jpg"
+                    alt="Soberistas 10th year anniversary"
+                  />
+                </a>
+              </Link>
             </HeaderLogo>
             <HeaderLinksList>
               <HeaderLink>
