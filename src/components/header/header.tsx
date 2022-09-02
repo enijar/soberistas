@@ -127,7 +127,19 @@ export default function Header() {
                   </a>
                 </Link>
               </HeaderLink>
-              <HeaderLink>
+              <HeaderLink
+                list={() => {
+                  return (
+                    <>
+                      <HeaderLink>
+                        <Link href="/news/mind">
+                          <a>Mind</a>
+                        </Link>
+                      </HeaderLink>
+                    </>
+                  );
+                }}
+              >
                 <Link href="/news/lifestyle">
                   <a>
                     <span>Lifestyle</span>

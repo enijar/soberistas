@@ -1,8 +1,8 @@
 import React from "react";
 import {
   HeaderLinkHeader,
-  HeaderLinkListInner,
   HeaderLinkList,
+  HeaderLinkListInner,
   HeaderLinkWrapper,
 } from "@/components/header/header.styles";
 
@@ -12,23 +12,12 @@ type Props = {
 };
 
 export default function HeaderLink({ children, list }: Props) {
-  const [listOpen, setListOpen] = React.useState(false);
-
   return (
-    <HeaderLinkWrapper
-      onPointerOver={listOpen ? undefined : () => setListOpen(true)}
-      onPointerOut={!listOpen ? undefined : () => setListOpen(false)}
-    >
+    <HeaderLinkWrapper hasList={list !== undefined}>
       <HeaderLinkHeader>{children}</HeaderLinkHeader>
       {list && (
-        <HeaderLinkList
-          style={{ display: !listOpen ? "none" : undefined }}
-          onPointerOver={() => setListOpen(true)}
-          onPointerOut={() => setListOpen(false)}
-        >
-          <HeaderLinkListInner>
-            {list()}
-          </HeaderLinkListInner>
+        <HeaderLinkList>
+          <HeaderLinkListInner>{list()}</HeaderLinkListInner>
         </HeaderLinkList>
       )}
     </HeaderLinkWrapper>

@@ -20,21 +20,6 @@ export const HeaderLinkHeader = styled.div`
   }
 `;
 
-export const HeaderLinkWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.25em;
-  font-size: 0.8em;
-  font-weight: normal;
-  cursor: pointer;
-  position: relative;
-
-  @media (max-width: 1060px) {
-    font-size: 0.6em;
-  }
-`;
-
 export const HeaderLinkListInner = styled.div`
   background-color: #ffffff;
   box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
@@ -45,24 +30,55 @@ export const HeaderLinkList = styled.div`
   position: absolute;
   top: 0;
   right: 0;
+  min-width: 8em;
+  display: none;
   white-space: nowrap;
   padding-block-start: 1.5em;
+  z-index: -1;
+`;
 
-  ${HeaderLinkWrapper} {
-    border-bottom: 1px solid #eee;
+export const HeaderLinkWrapper = styled.div<{ hasList?: boolean }>`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25em;
+  font-size: 0.8em;
+  font-weight: normal;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
 
-    :last-child {
-      border-bottom: none;
-    }
-
-    a {
-      padding: 1em;
-
-      :hover {
-        background-color: #9bd9da;
-      }
+  :hover, :focus-within {
+    ${HeaderLinkList} {
+      display: block;
     }
   }
+
+  @media (max-width: 1060px) {
+    font-size: 0.6em;
+  }
+
+  ${({ hasList = false }) => {
+    if (!hasList) return;
+    return css`
+      ${HeaderLinkList} {
+        border-bottom: 1px solid #eee;
+
+        :last-child {
+          border-bottom: none;
+        }
+
+        a {
+          width: 100%;
+          padding: 1em;
+
+          :hover {
+            background-color: #9bd9da;
+          }
+        }
+      }
+    `;
+  }}};
 `;
 
 export const HeaderLinksList = styled.div`
