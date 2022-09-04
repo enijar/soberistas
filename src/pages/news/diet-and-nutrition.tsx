@@ -8,7 +8,7 @@ type Props = {
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   return {
     props: {
-      title: "Diet",
+      title: "Diet & Nutrition",
     },
   };
 };

@@ -1,4 +1,5 @@
 import type { GetServerSideProps, NextPage } from "next";
+import { useSession } from "next-auth/react";
 import Header from "@/components/header/header";
 
 type Props = {
@@ -8,18 +9,21 @@ type Props = {
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   return {
     props: {
-      title: "Mind & Body",
+      title: "Me",
     },
   };
 };
 
-const MindAndBody: NextPage<Props> = (props) => {
+const Me: NextPage<Props> = (props) => {
+  const { data } = useSession();
+
   return (
     <main>
       <Header />
       <h1>{props.title}</h1>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
     </main>
   );
 };
 
-export default MindAndBody;
+export default Me;
